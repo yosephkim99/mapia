@@ -1,5 +1,6 @@
 package application;
 
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -177,7 +178,9 @@ public class mapiaGame {
 			public void run() {
 				// 뮤텍스로 투표 플레이어++
 				for(Client c : Main.clients) {
-					Main.MVP(c.votePlayer);
+					if(c.DOA && c.votePlayer != -1) {
+						Main.MVP(c.votePlayer);
+					}				
 				}
 				// 뮤텍스 종료
 				try {
@@ -241,7 +244,9 @@ public class mapiaGame {
 				int MostI = 0;
 				// 뮤텍스로 찬반 투표 계산중
 				for(Client c : Main.clients) {
-					Main.ADP(c.ADPlayer);
+					if(c.DOA && c.ADPlayer != -1) {
+						Main.ADP(c.ADPlayer);
+					}
 				}
 				try {
 					Thread.sleep(100);

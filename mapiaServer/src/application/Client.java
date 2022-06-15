@@ -17,9 +17,9 @@ public class Client {
 	public boolean doctor = false;
 	public boolean other = false;
 	public boolean voteStatus = false;	// 플레이어 투표 상태
-	public int votePlayer = 0;			// 자기가 투표한 인원
+	public int votePlayer = -1;			// 자기가 투표한 인원
 	public boolean ADStatus = false;	// 찬반 투표 상태
-	public int ADPlayer = 0;			// 찬반 투표 1 = 처형 2 = 생존
+	public int ADPlayer = -1;			// 찬반 투표 1 = 처형 2 = 생존
 	public boolean peopleChat = false;	// 플레이어 채팅이 활성화되면 채팅을 전송 못함
 	public boolean mapiaChat = false;	// 마피아 채팅이 활성화되면 채팅과 선택체팅이 가능함
 	public boolean PDChat = false;		// 경찰 의사 채팅이 활성화되면 플레이어 선택 채팅만 가능
