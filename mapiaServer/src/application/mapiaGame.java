@@ -287,8 +287,10 @@ public class mapiaGame {
 						System.out.println(e);
 					}
 				}
-				Main.clients.get(player).DOA = false;
-				Main.clients.get(player).send("당신은 죽었습니다.\n");
+				if(MostI == 1) {
+					Main.clients.get(player).DOA = false;
+					Main.clients.get(player).send("당신은 죽었습니다.\n");
+				}
 				Main.ADPlayer = new int [3]; // 값 초기화
 				try {
 					Thread.sleep(10);
